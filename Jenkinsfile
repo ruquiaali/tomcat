@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        cron('* * * * *')
+    }
   
     stages  {
         stage('check the status of tomcat9') {
